@@ -1,6 +1,9 @@
 package labshoppubsub.domain;
 
 import labshoppubsub.domain.*;
+
+import java.util.Optional;
+
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
@@ -9,4 +12,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
     path = "inventories"
 )
 public interface InventoryRepository
-    extends PagingAndSortingRepository<Inventory, Long> {}
+    extends PagingAndSortingRepository<Inventory, Long> {
+
+    Optional<Inventory> findByOrderId(Long id);
+
+}

@@ -1,33 +1,60 @@
 package labshoppubsub.domain;
 
-import java.util.Date;
-import java.util.List;
-import javax.persistence.*;
 import labshoppubsub.InventoryApplication;
+import javax.persistence.*;
+import java.util.List;
 import lombok.Data;
+import java.util.Date;
 
 @Entity
-@Table(name = "Inventory_table")
+@Table(name="Inventory_table")
 @Data
-public class Inventory {
 
+public class Inventory  {
+
+    
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    
+    
+    
+    
+    
     private Long id;
-
+    
+    
+    
+    
+    
     private Long stock;
+    
+    
+    
+    
+    
+    private Long orderId;
 
     @PostPersist
-    public void onPostPersist() {}
+    public void onPostPersist(){
+    }
 
-    public static InventoryRepository repository() {
-        InventoryRepository inventoryRepository = InventoryApplication.applicationContext.getBean(
-            InventoryRepository.class
-        );
+    public static InventoryRepository repository(){
+        InventoryRepository inventoryRepository = InventoryApplication.applicationContext.getBean(InventoryRepository.class);
         return inventoryRepository;
     }
 
+<<<<<<< HEAD
     public static void decreaseStock(OrderPlaced orderPlaced) {
+=======
+
+
+
+    public static void decreaseStock(OrderPlaced orderPlaced){
+
+        /** Example 1:  new item 
+        Inventory inventory = new Inventory();
+        repository().save(inventory);
+>>>>>>> origin/template
 
         /** fill out following code  */
         
@@ -40,5 +67,8 @@ public class Inventory {
          });
       
 
+        
     }
+
+
 }

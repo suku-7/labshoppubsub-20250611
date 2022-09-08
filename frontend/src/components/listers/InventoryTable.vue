@@ -68,6 +68,7 @@
                 [
                     { text: "id", value: "id" },
                     { text: "stock", value: "stock" },
+                    { text: "orderId", value: "orderId" },
                 ],
             inventory : [],
             newValue: {},
@@ -86,6 +87,7 @@
 
             this.newValue = {
                 'stock': 0,
+                'orderId': 0,
             }
         },
         methods: {

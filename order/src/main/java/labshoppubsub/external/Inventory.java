@@ -1,13 +1,16 @@
 package labshoppubsub.external;
 
-import java.util.Date;
 import lombok.Data;
-
+import java.util.Date;
 @Data
 public class Inventory {
 
     private Long id;
     private Long stock;
+    private Long orderId;
+
     // keep
 
 }
+
+
