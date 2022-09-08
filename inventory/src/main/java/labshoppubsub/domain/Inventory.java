@@ -43,22 +43,11 @@ public class Inventory  {
         return inventoryRepository;
     }
 
-<<<<<<< HEAD
     public static void decreaseStock(OrderPlaced orderPlaced) {
-=======
-
-
-
-    public static void decreaseStock(OrderPlaced orderPlaced){
-
-        /** Example 1:  new item 
-        Inventory inventory = new Inventory();
-        repository().save(inventory);
->>>>>>> origin/template
 
         /** fill out following code  */
         
-        repository().findByOrderId(orderPlaced.getId()).ifPresent(inventory->{
+        repository().findById(Long.valueOf(orderPlaced.getProductId())).ifPresent(inventory->{
             
             inventory.setStock(inventory.getStock() - orderPlaced.getQty()); // do something
             repository().save(inventory);
