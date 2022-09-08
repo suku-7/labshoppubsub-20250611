@@ -18,6 +18,7 @@
 
         <v-card-text>
             <Number label="Stock" v-model="value.stock" :editMode="editMode"/>
+            <Number label="OrderId" v-model="value.orderId" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
@@ -156,7 +157,7 @@
 
                 } catch(e) {
                     this.snackbar.status = true
-                    if(e.response.data.message) {
+                    if(e.response && e.response.data.message) {
                         this.snackbar.text = e.response.data.message
                     } else {
                         this.snackbar.text = e
@@ -178,7 +179,7 @@
 
                 } catch(e) {
                     this.snackbar.status = true
-                    if(e.response.data.message) {
+                    if(e.response && e.response.data.message) {
                         this.snackbar.text = e.response.data.message
                     } else {
                         this.snackbar.text = e
