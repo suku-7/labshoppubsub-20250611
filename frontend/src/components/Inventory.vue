@@ -18,7 +18,6 @@
 
         <v-card-text>
             <Number label="Stock" v-model="value.stock" :editMode="editMode"/>
-            <Number label="OrderId" v-model="value.orderId" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

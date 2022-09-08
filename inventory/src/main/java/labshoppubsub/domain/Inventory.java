@@ -27,12 +27,6 @@ public class Inventory  {
     
     
     private Long stock;
-    
-    
-    
-    
-    
-    private Long orderId;
 
     @PostPersist
     public void onPostPersist(){

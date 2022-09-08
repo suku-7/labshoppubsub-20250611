@@ -7,7 +7,6 @@ public class Inventory {
 
     private Long id;
     private Long stock;
-    private Long orderId;
 
     // keep
 

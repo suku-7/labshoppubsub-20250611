@@ -69,7 +69,6 @@
             
             me.newValue = {
                 'stock': 0,
-                'orderId': 0,
             }
         },
         methods:{
