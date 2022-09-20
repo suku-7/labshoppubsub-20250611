@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.*;
 import labshoppubsub.OrderApplication;
 import labshoppubsub.domain.OrderPlaced;
+import labshoppubsub.external.Inventory;
+import labshoppubsub.external.InventoryService;
 import lombok.Data;
 
 @Entity
@@ -33,9 +35,11 @@ public class Order {
     @PrePersist
     public void onPrePersist() {
         // Get request from Inventory
-        //labshoppubsub.external.Inventory inventory =
-        //    Application.applicationContext.getBean(labshoppubsub.external.InventoryService.class)
-        //    .getInventory(/** mapping value needed */);
+        Inventory inventory =
+           OrderApplication.applicationContext.getBean(InventoryService.class)
+           .getInventory(Long.valueOf(getProductId()));
+
+        if(inventory.getStock() < getQty()) throw new RuntimeException("Out of Stock!");
 
     }
 
