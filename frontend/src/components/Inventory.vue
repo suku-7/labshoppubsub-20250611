@@ -56,7 +56,7 @@
             </v-btn>
         </v-card-actions>
         <v-card-actions>
-            <v-spacer></v-spacer>                        
+            <v-spacer></v-spacer>
         </v-card-actions>
 
         <v-snackbar
@@ -95,7 +95,7 @@
                 text: ''
             },
         }),
-        created(){
+        computed:{
         },
         methods: {
             selectFile(){

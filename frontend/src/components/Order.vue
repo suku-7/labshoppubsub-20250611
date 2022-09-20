@@ -59,7 +59,7 @@
             </v-btn>
         </v-card-actions>
         <v-card-actions>
-            <v-spacer></v-spacer>                        
+            <v-spacer></v-spacer>
         </v-card-actions>
 
         <v-snackbar
@@ -98,7 +98,7 @@
                 text: ''
             },
         }),
-        created(){
+        computed:{
         },
         methods: {
             selectFile(){
@@ -159,7 +159,7 @@
 
                 } catch(e) {
                     this.snackbar.status = true
-                    if(e.response.data.message) {
+                    if(e.response && e.response.data.message) {
                         this.snackbar.text = e.response.data.message
                     } else {
                         this.snackbar.text = e
@@ -181,7 +181,7 @@
 
                 } catch(e) {
                     this.snackbar.status = true
-                    if(e.response.data.message) {
+                    if(e.response && e.response.data.message) {
                         this.snackbar.text = e.response.data.message
                     } else {
                         this.snackbar.text = e
