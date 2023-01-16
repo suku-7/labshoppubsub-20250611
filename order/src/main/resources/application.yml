@@ -2,7 +2,7 @@ server:
   port: 8080
 feign:
   hystrix:
-    enabled: true
+    enabled: false
 hystrix:
   command:
     default:
