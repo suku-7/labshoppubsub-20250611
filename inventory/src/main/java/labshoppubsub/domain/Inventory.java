@@ -41,12 +41,12 @@ public class Inventory  {
     public static void decreaseStock(OrderPlaced orderPlaced) {
 
         /** fill out following code  */
-        //
-        // repository().findById(Long.valueOf(orderPlaced.getProductId())).ifPresent(inventory->{
-        //     inventory.setStock(inventory.getStock() - orderPlaced.getQty());
-        //     repository().save(inventory);
+        
+         repository().findById(Long.valueOf(orderPlaced.getProductId())).ifPresent(inventory->{
+             inventory.setStock(inventory.getStock() - orderPlaced.getQty());
+             repository().save(inventory);
 
-        // });
+         });
 
         
     }
