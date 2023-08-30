@@ -4,6 +4,7 @@ sudo apt install iputils-ping
 
 pip install httpie
 
+mkdir temp && cd temp &&
 wget https://download.joedog.org/siege/siege-4.0.4.tar.gz &&
 tar -xvf siege-4.0.4.tar.gz &&
 cd siege-4.0.4 &&
