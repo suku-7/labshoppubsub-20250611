@@ -1,15 +1,22 @@
 server:
   port: 8080
-feign:
-  hystrix:
-    enabled: false
-hystrix:
-  command:
-    default:
-      execution.isolation.thread.timeoutInMilliseconds: 500
+
 spring:
   application:
     name: order
+
+feign:
+  client:
+    enabled: false
+#    config:
+#      default:
+#        connectTimeout: 3000  # 연결 타임아웃 (밀리초 단위)
+#        readTimeout: 510      # 읽기 타임아웃 (밀리초 단위)
+#        retryer:
+#          period: 2000        # 재시도 주기 (밀리초 단위)
+#          maxPeriod: 5000     # 최대 재시도 주기 (밀리초 단위)
+#          maxAttempts: 2      # 최대 재시도 횟수  
+
 ---
 
 spring:
