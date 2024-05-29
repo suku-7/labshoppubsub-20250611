@@ -8,16 +8,15 @@ spring:
 feign:
   hystrix:
     enabled: false
-  client:
-    enabled: false
+#  client:
 #    config:
 #      default:
-#        connectTimeout: 3000  # 연결 타임아웃 (밀리초 단위)
+#        connectTimeout: 3000  # 연결 timeout
+#        readTimeout: 610      # 응답 대기 timeout
 #        retryer:
-#          period: 2000        # 재시도 주기 (밀리초 단위)
-#          maxPeriod: 5000     # 최대 재시도 주기 (밀리초 단위)
+#          period: 2000        # 재시도 주기 
+#          maxPeriod: 5000     # 최대 재시도 주기 
 #          maxAttempts: 2      # 최대 재시도 횟수 
-
 hystrix:
   command:
     # 전역설정
