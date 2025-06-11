@@ -1,6 +1,6 @@
 # Model
 # lab-shop-pub-sub (circuit breaker 적용 테스트)
-## 고의로 처리 속도를 늦추고, circuit breaker를 통해서 일정 시간초를 초과하면 에러 발생 / 500에러가 발생할 경우 예외처리를 해서, 주문 처리
+## 고의로 처리 속도를 늦추고, circuit breaker를 통해서 일정 시간초를 초과하면 에러 발생 / 500에러가 발생할 경우 fallback 처리
 https://labs.msaez.io/#/189596125/storming/labshop-monolith-2
 
 ![스크린샷 2025-06-11 151258](https://github.com/user-attachments/assets/b1c4ed7c-c85a-4adb-b845-206eac3931c4)
